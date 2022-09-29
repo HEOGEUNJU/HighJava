@@ -8,8 +8,9 @@ public class T06EnumTest {
  	enum 열거형이름{ 상수값1, 상수값2, ..., 상수값n};
  */
 	// City 열거형 객체 선언 (기본값을 이용하는 열거형)
+	// 지역 옆에 괄호 써도 오류 안남
 	public enum City{서울, 부산, 대구, 광주, 대전};
-	
+	public enum Hometown {대구, 서울, 대전, 부산, 울산, 진주};
 	// 데이터값을 임의로 지정한 열거형 객체 선언
 	// 데이터값을 정해줄 경우에는 생성자를 만들어서 괄호 속의 값이 변수에 저장되도록 해야 한다.
 	public enum Season {
@@ -19,8 +20,9 @@ public class T06EnumTest {
 		private String str;
 		
 		//생성자 만들기(열거형의 생성자는 제어자가 묵시적으로 'private'이다.)
-		Season(String data) {
-			this.str = data;
+		
+		private Season(String str) {
+			this.str = str;
 		}
 		
 		// 값을 반환하는 메서드(Setter)
@@ -28,6 +30,7 @@ public class T06EnumTest {
 			return this.str;
 		}
 	}
+
 	
 	public static void main(String[] args) {
 	/*
@@ -59,7 +62,7 @@ public class T06EnumTest {
 		 // 열거형이름.values() => 데이터를 배열로 리턴함.
 		 Season[] ssArr = Season.values();
 		 for(Season s : ssArr) {
-			 System.out.println(s.name() + " : " + s.getStr());
+			 System.out.println(s.getStr());
 		 }
 		 System.out.println();
 		 
@@ -69,10 +72,13 @@ public class T06EnumTest {
 		 
 		 City city = City.대구;
 		 
+		 Enum<City> city2 = city.대구;
+		 
 		 System.out.println(city == City.대전);
 		 System.out.println(city == City.대구);
+//		 System.out.println(city == Hometown.대구); 오류가 나는 이유 : 비교할 수 있는 타입 자체가 다른다.
 		 
-		 System.out.println("대구 => " + city.compareTo(City.대구));
+		 System.out.println("대구 => " + city.compareTo(City.대구));//기본적으로 오름차순으로 정렬됨
 		 System.out.println("서울 => " + city.compareTo(City.서울));
 		 System.out.println("대전 => " + city.compareTo(City.대전));
 	}

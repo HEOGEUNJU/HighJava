@@ -53,7 +53,6 @@ public class T01GenericClassTest {
 		
 	}
 }
-
 class NonGeneric {
 	private Object val;
 
@@ -64,7 +63,6 @@ class NonGeneric {
 		this.val = val;
 	}
 }
-
 class MyGeneric<T> {
 	private T val;
 
