@@ -96,12 +96,3 @@ class PrintPIThread extends Thread {
 		System.out.println("       PI:" + Math.PI);
 	}
 }
-
-
-
-
-
-
-
-
-
