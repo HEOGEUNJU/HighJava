@@ -32,7 +32,7 @@ class ShareObject {
 	}*/
 	
 		//동기화 하는 방법 2 : 동기화 블럭으로 설정
-		//mutex : Mutual exclusion Object(상호배제 : 동신접근 차단)
+		//mutex : Mutual exclusion Object(상호배제 : 동시접근 차단)
 //		synchronized (this) {
 			public void add() {
 				for (int i = 0; i < 1000000000; i++) {
@@ -45,7 +45,6 @@ class ShareObject {
 		}
 		
 	}
-
 
 
 //작업을 수행하는 스레드
