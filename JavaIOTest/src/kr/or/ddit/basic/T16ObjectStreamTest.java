@@ -27,7 +27,7 @@ public class T16ObjectStreamTest {
 		try {
 			oos = new ObjectOutputStream(
 					new BufferedOutputStream(
-					new FileOutputStream("d:/D_Other/memObj.bin")));
+					new FileOutputStream("d:/D_Other/memObj.text")));
 			
 			//쓰기 작업
 			oos.writeObject(mem1); // 직렬화
@@ -50,7 +50,7 @@ public class T16ObjectStreamTest {
 		try {
 			ois = new ObjectInputStream(
 					new BufferedInputStream(
-					new FileInputStream("d:/D_Other/memObj.bin")));
+					new FileInputStream("d:/D_Other/memObj.text")));
 			
 			Object obj = null;
 			while((obj = ois.readObject()) != null) {
