@@ -51,5 +51,5 @@ public interface IBoardDao {
 	 * @param bv 게시글정보를 검색하기 위한 데이터
 	 * @return 검색된 결과를 담고 있는 List타입의 객체
 	 */
-	public List<BoardVO> searchMember(BoardVO bv);
+	public List<BoardVO> searchBoard(BoardVO bv);
 }

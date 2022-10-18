@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+
+	<!-- 이 영역에 SQL문에 맞는 태그를 사용하여 SQL문을 기술한다. 사용할 수 있는 기본적인 태그들 
+		<select> ~~~ </select> 
+		<insert> ~~~ </insert> 
+		<update> ~~~ </update> 
+		<delete> ~~~ </delete> 
+		위 태그에서 사용되는 속성들
+		 1) id속성 : 해당 태그를 호출할 때 <mapper> 태그의 namespace와 연결하여 사용하는 
+		이름. 
+		2) parameterType 속성 : SQL문에 사용될 데이터가 들어있는 객체타입 지정 
+		(보통 VO클래스, 자바의 자료형이름 등이 사용됨.) (typeAlias로 지정한 alias명을 사용할 수 있다.) 
+		3) resultType 속성 : select문을 실행한 결과를 담을 객체타입을 지정한다. 
+		(보통 VO클래스, 자바의 자료형이름 등이 사용됨.) (typeAlias로 지정한 alias명을 사용할 수 있다.) 
+		4) resultMap 속성 : 결과 레코드 컬럼명과 VO객체의 property명이 다를 경우에 적절한 매핑을 
+		위해 사용한다. -->
+
+	<insert id="insertBoard"
+		parameterType="kr.or.ddit.board.vo.BoardVO">
+		
+		insert into BOARD
+		(BOARD_NO, BOARD_TITLE, BOARD_WRITER, BOARD_DATE, BOARD_CONTENT)
+		values (board_seq.nextVal, #{boardTitle}, #{boardWriter}, sysdate, #{boardContent})
+	</insert>
+
+	<update id="updateBoard"
+		parameterType="kr.or.ddit.board.vo.BoardVO">
+		
+		update BOARD
+		set BOARD_TITLE = #{boardTitle},
+			BOARD_WRITER = #{boardWriter},
+			BOARD_CONTENT = #{boardContent}
+		where BOARD_NO = #{boardNo}
+	</update>
+
+	<delete id="deleteBoard" parameterType="String">
+	
+		delete from BOARD where BOARD_NO = #{boardNo}
+	</delete>
+
+	<select id="selectAllBoard"
+		resultType="kr.or.ddit.board.vo.BoardVO">
+		
+		select BOARD_NO as boardNo,
+			BOARD_TITLE as boardTitle,
+			BOARD_WRITER as boardWriter,
+			BOARD_DATE as boardDate,
+			BOARD_CONTENT as boardContent
+		from board
+	</select>
+	
+	<select id="selectBoard" parameterType="String" resultType="BoardVO">
+	
+		select board_no as boardNo,
+			BOARD_TITLE as boardTitle,
+			BOARD_WRITER as boardWriter,
+			BOARD_DATE as boardDate,
+			BOARD_CONTENT as boardContent
+		from board
+		where board_no = #{boardNo}
+	</select>
+
+	<select id="checkBoard" parameterType="String" resultType="int">
+		
+		select count(*) as cnt
+		from board
+		where board_no = #{boardNo}
+	</select>
+	
+	<resultMap type="BoardVO" id="boardMap">
+		<id column="BOARD_NO" property="boardNo"/>
+		<result column="BOARD_TITLE" property="boardTitle"/>
+		<result column="BOARD_WRITER" property="boardWriter"/>
+		<result column="BOARD_CONTENT" property="boardContent"/>
+	
+	</resultMap>
+	<select id="searchBoard" parameterType="BoardVO" resultMap="boardMap">
+	
+		select * from board where 1=1 
+		
+		<if test="boardNo != null and boardNo != ''">
+				and BOARD_NO = #{boardNo} 
+		</if>
+		<if test="boardTitle != null and boardTitle !=''">
+				and BOARD_TITLE = #{boardTitle} 
+		</if>
+		<if test="boardWriter != null and boardWriter !=''">
+				and BOARD_WRITER = #{boardWriter} 
+		</if>
+		<if test="boardContent != null and boardContent !=''">
+				and BOARD_CONTENT like '%' || #{boardContent} || '%' 
+		</if>
+
+	</select>
+	
+	
+	
+</mapper>

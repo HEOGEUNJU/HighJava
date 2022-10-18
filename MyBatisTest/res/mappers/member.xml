@@ -44,10 +44,10 @@
 	<select id="selectAllMember"
 		resultType="kr.or.ddit.member.vo.MemberVO">
 		
-		select mem_id as memId,
-			mem_name as memName,
-			mem_tel as memTel,
-			mem_addr as memAddr
+		select mem_id,
+			mem_name,
+			mem_tel,
+			mem_addr 
 		from mymember
 	</select>
 	
