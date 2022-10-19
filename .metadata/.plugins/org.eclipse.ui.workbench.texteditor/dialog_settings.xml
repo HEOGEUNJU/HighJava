@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Board"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="member"/>
+			<item value="mv"/>
+			<item value="mem"/>
+			<item value="Member"/>
 			<item value="Post"/>
 			<item value="post"/>
 			<item value="jdbc"/>
@@ -21,8 +25,9 @@
 			<item value=" "/>
 		</list>
 		<list key="replacehistory">
-			<item value="Board"/>
+			<item value="bv"/>
 			<item value="board"/>
+			<item value="Board"/>
 			<item value="til3"/>
 			<item value="3"/>
 			<item value="bundle"/>

@@ -31,7 +31,7 @@
   				<property name="poolMaximumActiveConnections" value="2"/>
   				<!-- 유효상태에서의 최대 커넷션 수 -->
   				<property name="poolMaximumIdleConnections" value="2"/>
-  			</dataSource>
+  			</dataSource> 
   		</environment>
   	</environments>
 
