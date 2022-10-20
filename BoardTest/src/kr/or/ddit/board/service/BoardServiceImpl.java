@@ -1,4 +1,4 @@
-package kr.or.ddit.board.service;
+ package kr.or.ddit.board.service;
 
 import java.util.List;
 
@@ -16,12 +16,12 @@ public class BoardServiceImpl implements IBoardService{
 		boardDao = BoardDaoImpl.getinstance();
 	}
 	
-	public static IBoardService getInstance() {
-		if(boardService == null) {
-			boardService = new BoardServiceImpl();
-		}
-		return boardService;
-	}
+//	public static IBoardService getInstance() {
+//		if(boardService == null) {
+//			boardService = new BoardServiceImpl();
+//		}
+//		return boardService;
+//	}
 	
 	@Override
 	public int registBoard(BoardVO bv) {

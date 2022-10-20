@@ -18,11 +18,12 @@ public class TcpSocketServerTest {
 		// 연결 요청이 오면 Socket객체를 생성해서 Client의 Socket과 연결됨.
 		Socket socket = server.accept();
 		
+		
 		//-----------------------------------------------------------------
 		// 이 이후는 클라이언트와 연결된 후의 작업을 진행하면 된다.
 		System.out.println("접속한 클라이언트 정보");
 		System.out.println("주소 : " + socket.getInetAddress());
-		
+				
 		// Client에 메시지 보내기
 		
 		// OutputStream 객체를 구성하여 전송한다.
