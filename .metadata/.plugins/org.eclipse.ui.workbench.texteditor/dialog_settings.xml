@@ -8,6 +8,9 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="main"/>
+			<item value="&#x09;&#x09;&#x09;}"/>
+			<item value="clients"/>
 			<item value="member"/>
 			<item value="mv"/>
 			<item value="mem"/>
@@ -20,9 +23,6 @@
 			<item value="prop"/>
 			<item value="Main"/>
 			<item value="JDBCUtil"/>
-			<item value="&#x09;h"/>
-			<item value="main"/>
-			<item value=" "/>
 		</list>
 		<list key="replacehistory">
 			<item value="bv"/>
