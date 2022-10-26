@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/*
+   배열
+ - 대괄호를 이용해 여러 개의 값을 리스트 형태로 나열한 자료구조
+ - 배열의 요소(element) : 배열을 구성하는 각각의 값
+ - 요소의 위치(index)   : 배열에서의 요소 위치
+ - 객체 타입으로 존재
+ */
+ //				  0		   1	 2       3
+ const cafe = ["coffee","cake","tea","cookie"];
+ console.log("cafe : " + cafe);	
+ console.log("cafe[1] : " + cafe[1]);
+ 
+ let sports = ["baseball", "basketball", "tennis", "swimming"]
+ //swimming
+ console.log("sports[3]: " + sports[3]);
+ //타입 확인
+ console.log(typeof(sports));
+ 
+ let str = "개똥이";
+ console.log(str);
+ 
+ //배열의 요소의 개수 구해보자
+ console.log("cafe 배열 요소의 개수는?" + cafe.length);
+ 
+ //cafe 배열의 구조를 보고싶음
+ console.dir(cafe);
+ 
+ //문제)
+ 
+ 
+ 
+ 
+ //내가 좋앟는 음식 5개 요소를 food라는 배열에 입력해보자
+ const food = ["coffee", "meat", "hamburger", "pizza", "chicken"];
+ //food라는 배열의 크기를 구해보자
+ const foodLength = food.length;
+ console.log("food 배열의 크기는?" + food.lenght);
+ //food라는 배열 중 3번째 요소를 짜장면으로 변경한 후 확인해보자
+ food[2] = "water";
+ //food라는 배열의 구조를 확인해보자
+ console.dir(food);
+ 
+ //for문을 사용해서 요소를 출력해보자
+ for(let i=0; i<foodLength; i++){
+	 console.log("food["+i+"] : " + food[i])
+ }
+</script>
+</head>
+<body>
+
+</body>
+</html>

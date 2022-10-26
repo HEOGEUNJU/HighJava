@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="text" name="poli" value="폴리">
+<input type="button" value="get" onclick="f_getAjax()">
+<input type="button" value="post" onclick="f_postAjax()">
+<div id = "disp"></div>
+<script>
+
+	var v_val = document.querySelector('input[name=poli]').value;
+	var v_disp = document.querySelector('#disp');
+	
+	function f_getAjax() {
+		console.log(v_val);
+		//ajax기본구문
+		var req = new XMLHttpRequest();
+		req.open("get", "/WebPro/Ajax?aaa=" + v_val, true);
+		req.onreadystatechange = function() {
+			if (req.readyState == 4 && req.status == 200) {
+// 				alert(req.responseText);
+				v_disp.innerHTML = req.responseText;
+			}
+		}
+		req.send();
+	}
+
+	function f_postAjax() {
+		var req = new XMLHttpRequest();
+		req.open("post", "/WebPro/Ajax", true);
+		req.onreadystatechange = function() {
+			if (req.readyState == 4 && req.status == 200) {
+				console.log(req.responseText); //json object(문자열 데이터)
+				console.log(JSON.parse(req.responseText));
+				var data = JSON.parse(req.responseText);
+				v_disp.innerHTML = `<h4 style='color:red'>robotcar ${data.key} </h4>`
+			}
+
+		}
+		//content-type: http통신에서 전송되는 데이터의 타입을 나타내는 헤더정보
+		req.setRequestHeader("content-type", "application/x-www-form-urlencoded;charset=utf-8");
+		req.send("key="+v_val); //post는 data를 send를 메소드에 담아서 전달하죠
+	}
+</script>   
+</body>
+</html>

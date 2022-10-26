@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>유투브만들기</title>
+    <!-- 외부스타일시트 연결 -->
+    <!--<link rel="stylesheet" href="../css/myStyle.css">-->
+    <!-- favicon연결 -->
+    <link rel="shorcut icon" href="../images/imgs/아이유2.jfif" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            width: 100%;
+            height: 7.0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background-color: white;
+        }
+
+        #middle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #side {
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            margin-top: 4.0%;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            /* background-color: blue; */
+        }
+
+        #content {
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            margin-right: 0%;
+            margin-left: 250px;
+            margin-top: 4.0%;
+            left: 0;
+            /* background-color: #ccc; */
+            position: relative;
+        }
+
+        table {
+            /* border: 1px solid black; */
+            background-color: white;
+            width: 100%;
+            height: 5.5%;
+        }
+
+        #list {
+            width: 55px;
+        }
+
+        #logo {
+            top: 0%;
+            width: 15%;
+        }
+
+        #search {
+            width: 50%;
+            text-align: right;
+        }
+
+        #mike {
+            width: 30%;
+        }
+
+        #subMenu {
+            display: block;
+            /* text-align: center; */
+            /* right: 30%; */
+            margin-left: 10%;
+        }
+
+        #subM {
+            position: fixed;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid gainsboro;
+            border-bottom: 1px solid gainsboro;
+        }
+
+        #subM ::after {
+            opacity: 0.7;
+        }
+
+        #mainCon {
+            margin-top: 2%;
+            width: 88%;
+            height: 100%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        #shorts{
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+        #shortsMain{
+            height: 100%;
+            background-color: #f9f9f9;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <table>
+                <tr>
+                    <td id="list">
+                        <a href=""><img src="../images/imgs/list.png" alt=""></a>
+                    </td>
+                    <td id="logo">
+                        <a href=""><img src="../images/imgs/logo.png" alt=""></a>
+                    </td>
+                    <td id="search">
+                        <a href=""><img src="../images/imgs/search.png" alt=""></a>
+                    </td>
+                    <td id="mike">
+                        <a href=""><img src="../images/imgs/mike.png" alt=""></a>
+                    </td>
+                    <td id="cam">
+                        <a href=""><img src="../images/imgs/cam.png" alt=""></a>
+                    </td>
+                    <td id="ring">
+                        <a href=""><img src="../images/imgs/ring.png" alt=""></a>
+                    </td>
+                    <td id="myMenu">
+                        <a href=""><img src="../images/imgs/myMenu.png" alt=""></a>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div id="middle">
+            <div id="side">
+                <a href=""><img src="../images/imgs/side.png" alt=""></a>
+
+            </div>
+            <div id="content">
+                <table id="subM">
+                    <tr>
+                        <td id="subMenu">
+                            <a href=""><img src="../images/imgs/subMenu.png" alt=""></a>
+
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table id="mainCon">
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=duszzjvhglo"><img src="../images/imgs/main1.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=QpbWFJgG2Cg"><img src="../images/imgs/main2.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=baAR6ib59VI"><img src="../images/imgs/main3.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=7OXbzE9md-Q"><img src="../images/imgs/main4.png"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=LQaVF6KYk0o"><img src="../images/imgs/main5.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=wy9mePzdEQE"><img src="../images/imgs/main6.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=fyDz91HDt4g"><img src="../images/imgs/main7.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=wyN27QpglGE&list=
+                            RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVMwyN27QpglGE&start_radio=1"><img
+                                    src="../images/imgs/main8.png" alt=""></a>
+                        </td>
+                    </tr>
+                </table>
+                <style>
+                    #shortsMain { border: 1px solid red;}
+                </style>
+                <table id="shorts">
+                    <tr>
+                        <td colspan="10">
+                            <a href=""><img src="../images/imgs/shorts.png" alt=""></a>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/wdxmr3PLeJU"><img src="../images/imgs/shorts1.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/UpXsJCfqJSA"><img src="../images/imgs/shorts2.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/IlNOvDjAzew"><img src="../images/imgs/shorts3.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            
+                            <a href="https://www.youtube.com/shorts/mEaTCkO-eko"><img src="../images/imgs/shorts4.png" alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/NwvCxQ2Fb_A"><img src="../images/imgs/shorts5.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/_9U-v73XUUo"><img src="../images/imgs/shorts6.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/2K84xwLks0Y"><img src="../images/imgs/shorts7.png" alt=""></a>
+                            
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/shorts/yYWcgxsc5f0"><img src="../images/imgs/shorts8.png" alt=""></a>
+
+                        </td>
+                    </tr>
+                </table>
+                <table id="mainCon">
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=WIFmo9276aE"><img src="../images/imgs/main9.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=GY_StGcBSYw"><img src="../images/imgs/main10.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=3ERtNZqh1XA"><img src="../images/imgs/main11.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=hr2xGbc6jO0"><img src="../images/imgs/main12.png"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=p5VkQ_ZDWu4"><img src="../images/imgs/main13.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=KMUyK42HsRY"><img src="../images/imgs/main14.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=E3iXLsBNsMc"><img src="../images/imgs/main15.png"
+                                    alt=""></a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=9D4bFzuviZA"><img src="../images/imgs/main16.png"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

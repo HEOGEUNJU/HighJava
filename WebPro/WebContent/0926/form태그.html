@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style > 
+	img{
+	width : 100px
+	}
+</style>
+</head>
+<body>
+<!-- 	서버로 값을 전송할 때 <form> 태그로 입력양식태그들을 둘러 싸야한다.
+		입력양식태그들은 반드시 name속성을 가져야 값을 전달할  수 있다.
+		?name = value&name = value...의 형식을 queryString이라고 부른다.
+		
+		form태그는 한 페이지 내에 여러개를 작성해도 되지만 form태그 안쪽에 다시 작성하면 안된다.
+		
+		method는 전송방식을 정의한다.
+		get : queryString으로 데이터가 전달되며 용량에 제한이 있고 보안성이 떨어진다.
+		post : request body안쪽에 데이터가 실려서 보안상 get보다 유리하고 전달할 용량에 제한이 없다.
+		
+		action에 보통 요청정보를 넘길 파일경로를 지정하지만, default는 페이지 자신이 된다.
+
+		많이 사용되는 부분이므로 꼭 숙지하고 넘어가세요.
+ -->
+	<form action="test.jsp"method="post">
+		이름
+		<input name="id" value = "디그다"><br> <!-- input의 default타입은 text기 때문에 생략해도 된다. -->
+		별명
+		<input type="text" name="alias" value = "digda	"><br>
+		<!-- 단순히 화면을 꾸며주는 형태의 tag존재는 form 데이터 전송에 영향을 주지 않아요 -->
+		<img src = "../images/digda.jpg" alt = "이미지파일"><br>
+		비밀번호
+		<input type="password" name="pw">
+		<input type="submit">
+		<input type="reset">
+	</form>
+</body>
+</html>

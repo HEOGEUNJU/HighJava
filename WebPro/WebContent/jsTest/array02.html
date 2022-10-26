@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script type="text/javascript">
+// 맨 앞에서 요소를 추가해보자
+const cafe = ["coffee","cake","tea","cookie"];
+//맨 앞에 빵을 추가한 후의 요소의 개수를 구함
+const count = cafe.unshift("bread");
+
+console.log("count : " + count)	;
+console.log("cafe : " + cafe)
+
+// 맨 앞에서 요소를 지워보자
+//지워진 old 요소를 변수에 담을 수 있음 
+const oldElement = cafe.shift();
+
+console.log("oldElement : " + oldElement);
+console.log("cafe : " + cafe);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
