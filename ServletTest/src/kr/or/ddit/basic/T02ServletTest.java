@@ -74,9 +74,6 @@ public class T02ServletTest extends HttpServlet{
 		out.println("서블릿 경로 =>" +req.getServletPath());
 		out.println("컨텍스트 경로 =>" + req.getContextPath());
 		
-		
-		
-		
 	}
 	
 	@Override

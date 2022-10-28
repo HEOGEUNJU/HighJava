@@ -29,7 +29,7 @@ public class T04ErrorHandler extends HttpServlet{
 		
 		// 응답 시작
 		resp.setCharacterEncoding("UTF-8");
-		resp.setContentType("text/html");
+		resp.setContentType("text/html"); // 컨텐츠 타입을 마인 타입이라고 부르고 정해진 규칙이 있음.
 		
 		PrintWriter out = resp.getWriter();
 		
