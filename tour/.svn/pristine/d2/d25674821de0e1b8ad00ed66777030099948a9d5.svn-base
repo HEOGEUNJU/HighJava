@@ -1,0 +1,29 @@
+package tour;
+
+public class DaeJeon {
+	 public static void main(String[] args) {
+		System.out.println("	 아르를르ㅡ르르르르르");
+		System.out.println("여러분 들리세요? -근주-");
+		System.out.println( "들리세요?");
+		System.out.println( "제가요???????");
+		System.out.println( "제가요??????? 네............");
+		System.out.println( "또요???????");
+		
+		
+		
+		
+		System.out.println("내거는??????????? - 선민 - ");
+		
+		System.out.println("형 들리세요?");
+		System.out.println("형 들리세요? 진짜루??????");
+		System.out.println("띠용");
+	}
+
+	 
+	 
+	 
+	 
+	 
+	 
+	
+}

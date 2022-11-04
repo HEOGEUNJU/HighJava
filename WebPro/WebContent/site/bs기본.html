@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 웹 페이지 너비를 디바이스 너비로 맞춤/ 초기화면 배율을 1로 설정 1=100% -->
+<meta name="viewport" content="width = device-width, initial-scale =1">
+<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+div[class|=container] {
+	border: 2px solid gold;
+}
+
+div[class|=col] {
+	border: 2px solid green;
+	display: inline-block;
+}
+</style>
+
+</head>
+<body>
+	아무말대잔치
+
+	<!-- .container : 레이아웃을 만드는 가장 상위의 요소, 사이트 컨텐츠 래핑에 필요 -->
+	<div class="container">가로 해상도에 따라 너비 값 변화 768px이상 - 720px /
+		992px이상 - 960px / 1200px이상-1140px</div>
+	<div class="container-fluid">가로 해상도 관계없이 너비 값 100% 표현</div>
+
+	<!-- 	그리드 시스템 : 한 행에 최대 12개의 열을 허용한다 -->
+	<!-- xs,sm,md,lg 클래스로 나뉘어 해상도 별 영역을 표시한다.
+	너비가 줄어들 경우 그리드시스템 깨짐 주의 -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">셀1</div>
+			<div class="col-xs-6">셀2</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">셀3</div>
+			<div class="col-xs-4">셀4</div>
+			<div class="col-xs-4">셀5</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">셀6</div>
+			<div class="col-xs-8">셀7</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">셀8</div>
+		</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>john@example.com</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Moe</td>
+					<td>mary@example.com</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Modal Header</h4>
+					</div>
+					<div class="modal-body">
+						<p>Some text in the modal.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

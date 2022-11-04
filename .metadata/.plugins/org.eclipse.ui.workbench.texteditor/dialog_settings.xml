@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="&lt;%--"/>
 		<list key="findhistory">
+			<item value="&lt;!--"/>
+			<item value="--&gt;"/>
+			<item value="500"/>
 			<item value="main"/>
 			<item value="&#x09;&#x09;&#x09;}"/>
 			<item value="clients"/>
@@ -20,11 +23,10 @@
 			<item value="jdbc"/>
 			<item value="til2"/>
 			<item value="2"/>
-			<item value="prop"/>
-			<item value="Main"/>
-			<item value="JDBCUtil"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&lt;%--"/>
+			<item value="--%&gt;"/>
 			<item value="bv"/>
 			<item value="board"/>
 			<item value="Board"/>

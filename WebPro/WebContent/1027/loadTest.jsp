@@ -7,6 +7,7 @@
 <%
 	String uId = request.getParameter("userId");
 	String uPw = request.getParameter("userPw");
+	System.out.println("와우");
 
 // JDBC를 사용해서 DB정보 가져오기
 	Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -21,7 +22,6 @@
 	//System.out.println(rs.next()); //boolean값으로 확인 가능
 	if(rs.next()){
 %>
-		
 		{"rst" : "ok"}
 <%
 	} else{

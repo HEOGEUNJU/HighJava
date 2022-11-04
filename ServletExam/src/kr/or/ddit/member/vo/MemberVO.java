@@ -24,6 +24,18 @@ public class MemberVO {
 		return memId;
 	}
 
+	
+	private long atchFileId;
+	
+	
+	
+	public long getAtchFileId() {
+		return atchFileId;
+	}
+
+	public void setAtchFileId(long atchFileId) {
+		this.atchFileId = atchFileId;
+	}
 
 	public void setMemId(String memId) {
 		this.memId = memId;
